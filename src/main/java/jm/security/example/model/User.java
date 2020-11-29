@@ -9,7 +9,7 @@ import java.util.Set;
 // Для того, чтобы в дальнейшим использовать класс User в Spring Security, он должен реализовывать интерфейс UserDetails.
 // UserDetails можно представить, как адаптер между БД пользователей и тем что требуется Spring Security внутри SecurityContextHolder
 public class User implements UserDetails {
-    private Long id;
+    private int id;
     private String name; // уникальное значение
     private String password;
     private Set<Role> roles;
@@ -18,18 +18,18 @@ public class User implements UserDetails {
 
     }
 
-    public User(Long id, String name, String password, Set<Role> roles) {
+    public User(int id, String name, String password, Set<Role> roles) {
         this.id = id;
         this.name = name;
         this.password = password;
         this.roles = roles;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
