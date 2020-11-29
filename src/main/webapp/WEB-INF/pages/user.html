@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello user</title>
+</head>
+<body>
+<div>
+    <p>Hello User, this Spring Security example</p>
+</div>
+
+<div th:each="user : ${user}">
+    <a th:href="@{/user/{id}(id=${user.getId()})}" th:text="${user.getName()}">user</a>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/user/new">Create new user</a>
+
+</body>
+</html>
