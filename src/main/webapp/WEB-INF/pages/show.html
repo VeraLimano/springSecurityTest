@@ -12,11 +12,15 @@
 <label for>Password: </label>
 <P th:text="${user.getPassword()}">VALUE</P>
 
-<a th:href="@{/user/{id}/edit(id=${user.getId()})}">Edit</a>
+<a th:href="@{/admin/{id}/edit(id=${user.getId()})}">Edit</a>
 
-<form th:method="DELETE" th:action="@{/user/{id}(id=${user.getId()})}">
+<br/>
+<br/>
+
+<form th:method="DELETE" th:action="@{/admin/{id}(id=${user.getId()})}">
     <input type="submit" value="Delete"/>
 </form>
+
 
 </body>
 </html>

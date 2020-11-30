@@ -2,21 +2,22 @@
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Hello user</title>
+    <title>Title</title>
 </head>
 <body>
+
 <div>
     <p>Hello User, this Spring Security example</p>
 </div>
 
-<div th:each="user : ${user}">
-    <a th:href="@{/user/{id}(id=${user.getId()})}" th:text="${user.getName()}">user</a>
-</div>
+<label for>Name: </label>
+<p th:text="${username.getName()}">VALUE</p>
+<label for>ID: </label>
+<P th:text="${username.getId()}">VALUE</P>
+<label for>Password: </label>
+<P th:text="${username.getPassword()}">VALUE</P>
 
-<br/>
-<hr/>
-
-<a href="/user/new">Create new user</a>
+<a href="/logout">Logout</a>
 
 </body>
 </html>
